@@ -13,7 +13,7 @@ return array(
 	|
 	*/
 
-	'debug' => false,
+	'debug' => true,
 
 	/*
 	|--------------------------------------------------------------------------
@@ -122,6 +122,13 @@ return array(
 		'Illuminate\View\ViewServiceProvider',
 		'Illuminate\Workbench\WorkbenchServiceProvider',
 		'Way\Generators\GeneratorsServiceProvider',
+		'Khill\Fontawesome\FontAwesomeServiceProvider',
+		'Thapp\JitImage\JitImageServiceProvider',
+		'Intervention\Image\ImageServiceProvider',
+		'Artdarek\OAuth\OAuthServiceProvider',
+		'Thomaswelton\LaravelGravatar\LaravelGravatarServiceProvider',
+		'Awjudd\FeedReader\FeedReaderServiceProvider',
+		'Maatwebsite\Excel\ExcelServiceProvider',
 
 	),
 

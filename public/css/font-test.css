@@ -1,0 +1,17 @@
+/* CSS Document */
+@font-face {
+    font-family: 'Zawgyi-One';
+    src: url('/admin_root//fonts/Zawgyi-One.eot');
+    src: url('/admin_root/fonts/Zawgyi-One.eot?iefixa') format('eot'),
+         url('/admin_root/fonts/Zawgyi-One.woff') format('woff'),
+         url('/admin_root/fonts/Zawgyi-One.ttf') format('truetype'),
+         url('/admin_root/fonts/Zawgyi-One.svg#svgFontName') format('svg');
+    font-weight: normal;
+    font-style: normal;
+	font-stretch: wider;
+	unicode-range: U+00-FF, U+980-9FF;
+	/*letter-spacing: 0.10em!important;
+	line-height: 200%;*/
+}
+
+html,body {font-family: "Zawgyi-One", "Helvetica Neue",Helvetica,Arial,sans-serif!important;/*letter-spacing: 0.020em!important;*/line-height: 200%!important;}

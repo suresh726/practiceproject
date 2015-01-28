@@ -7,7 +7,16 @@
 	"require": {
 		"laravel/framework": "4.2.*",
 		"way/generators": "~2.0",
-		"twitter/bootstrap": "*"
+		"twitter/bootstrap": "*",
+		"khill/fontawesomephp" : "1.0.x",
+		"thapp/jitimage": "dev-master",
+		"intervention/image": "2.*",
+		"artdarek/oauth-4-laravel": "dev-master",
+		"thomaswelton/laravel-gravatar": "0.0.x",
+		"simplepie/simplepie": "dev-master",
+		"awjudd/feed-reader": "1.1.*",
+		"maatwebsite/excel": "1.*",
+		"doctrine/dbal": "2.6.*@dev"
 	},
 	"autoload": {
 		"classmap": [

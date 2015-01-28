@@ -1,0 +1,46 @@
+@charset "utf-8";
+/* CSS Document */
+.top-add-new{margin:0.5em;background-color: rgba(43,140,92,1.0)!important;border-color: rgba(43,140,92,1.0)!important;color: rgba(255,255,255,1.0)!important;}
+.mg-top-1e{margin-top:1em;}
+.mg-right-1e{margin-right:1em;}
+.alert-display-position{position:absolute;top:150px;left:3%;z-index:999;}
+.alrt-scss{background:rgba(172,236,156,1.0);}
+.alrt-err{background:rgba(255,122,122,1.0);}
+
+body > .header .logo{text-align:left;}
+body > .header .logo img{margin-top:0px;max-height:40px;}
+.skin-blue .logo, .skin-blue .navbar, .skin-blue .left-side, .sidebar .sidebar-menu .treeview-menu > li > a, .skin-blue .sidebar > .sidebar-menu > li > .treeview-menu {background-color: rgba(43,140,92,1.0);}
+.skin-blue .logo:hover {background: rgba(43,140,92,0.9)}
+.skin-blue .sidebar a, .skin-blue .sidebar > .sidebar-menu > li > .treeview-menu > li > a{color:rgba(255,255,255,1.0);}
+.user-panel {background: rgba(255,255,255,0.1);}
+.user-panel > .info > p{color: rgba(255,255,255,0.9);}
+.skin-blue .sidebar > .sidebar-menu > li.active > a, .skin-blue .sidebar > .sidebar-menu > li > a:hover{background: rgba(255,255,255,0.1); color: rgba(255,255,255,0.9);}
+.skin-blue .sidebar > .sidebar-menu > li > .treeview-menu > li > a{display:block;padding-left:15px; padding-right:0px;width:100%;margin-left:0px!important;border-top:1px solid rgba(255,255,255,0.1);}
+.skin-blue .sidebar > .sidebar-menu > li > .treeview-menu > li > a:hover{background: rgba(0,0,0,0.10); color: rgba(255,255,255,0.9);}
+
+/*=======================================================================================================
+									CONTENT
+======================================================================================================*/
+.wrapper, .content{background: url(../../images/mybank-bg.jpg) repeat 0% 0%;}
+.skin-blue .right-side > .content-header{background: rgba(255,255,255,0.5)!important;}
+
+
+/*=======================================================================================================
+									TOP BAR
+======================================================================================================*/
+.navbar-nav > .user-menu > .dropdown-menu > li.user-header, .navbar-nav > .messages-menu > .dropdown-menu{background: url(../../images/mybank-bg.jpg) repeat 0% 0%;}
+.navbar-nav > .messages-menu > .dropdown-menu > li .menu > li > a:hover{background:rgba(255,255,255,0.2);}
+.navbar-nav > .messages-menu > .dropdown-menu > li .menu > li > a > h4{color:rgb(255,255,255);}
+.navbar-nav > .messages-menu > .dropdown-menu > li .menu > li > a > p, .navbar-nav > .messages-menu > .dropdown-menu > li .menu > li > a > h4 small{color:rgba(255,255,255,0.8);}
+
+/*=======================================================================================================
+									SERVICE LISTING
+======================================================================================================*/
+ul.lst-serv{list-style:none;margin:0px;padding:0px;}
+ul.lst-serv li.parent{font-weight:bold;text-align:left;border-bottom:1px ridge rgba(150,150,150,0.1);}
+ul.lst-serv li.child{text-indent:0.5em;margin:0 0 0 1em;}
+ul.lst-serv li.child .row .col-md-10:before{content:"\00BB \0020"; width:0.8em;display:inline;}
+
+ul.lst-serv-chk{list-style:none;margin:0px;padding:0px;}
+ul.lst-serv-chk li.parent{font-weight:bold;text-align:left;border-bottom:1px ridge rgba(150,150,150,0.1);}
+ul.lst-serv-chk li.child{text-indent:0.5em;margin:0 0 0 1em;}

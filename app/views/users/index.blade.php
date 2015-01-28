@@ -1,24 +1,68 @@
-<!DOCTYPE html>
-<html lang="en">
-{{ HTML::style('admin_root/css/bootstrap.css') }}
-{{ HTML::style('admin_root/css/bootstrap-theme.css') }}
-
-<div class="row">
-<div class="row-fluid">
-  <div class="span12">
-    Fluid 12
-    <div class="row-fluid">
-      <div class="span6">
-        Fluid 6
-        <div class="row-fluid">
-          <div class="span6">Fluid 6</div>
-          <div class="span6">Fluid 6</div>
-        </div>
-      </div>
-      <div class="span6">Fluid 6</div>
-    </div>
-  </div>
-</div>
-</html>
-{{ HTML::script('admin_root/js/jquery-1.11.1.min.js') }}
-{{ HTML::script('admin_root/js/bootstrap.min.js') }}
+<section class="content-header">
+                    <h1>
+                        Dashboard
+                        <small>Control panel</small>
+                    </h1>
+                    <ol class="breadcrumb">
+                        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+                        <li class="active">Dashboard</li>
+						
+                    </ol>
+                </section>
+	<section class="content">
+	<div class="box">
+		<div class="box-header">
+			<h3 class="box-title">Users</h3>
+<a href="{{Request::root()}}/admin/create" class="pull-right btn btn-info top-add-new" ><i class="fa fa-plus-circle"></i> Add new User</a>			
+		</div>
+		<!-- /.box-header -->
+		<div class="box-body">
+			<table class="table table-bordered">
+				<tr>
+					<th>SN</th>
+					@foreach($header_of_tables as $key=>$value)
+					<th>{{$value}}</th>
+					@endforeach
+					<th>Edit</th>
+					<th>Delete</th>
+				</tr>
+				<?php $k = 1; ?>
+				@foreach($users as $userdata)
+				<tr>
+					<th><?php echo $k;
+					$k++;
+				?></th>
+					
+					@foreach(array_keys($header_of_tables) as $key)
+						@if($key == "is_active" )
+							@if($userdata->$key == 1)
+								<th><span class="badge bg-red">InActive</span></th>
+							@else
+								<th><span class="badge bg-green">Active</span></th>
+							@endif
+						@else
+						<th>{{$userdata->$key}}</th>
+						@endif
+					@endforeach
+					<td><a href="{{Request::root()}}/admin/{{$userdata->id}}/edit" class="btn btn-success" title="edit">{{FA::icon('edit')}}</a></td>
+					<td>  
+ 									{{ Form::open(array('method'=> 'DELETE', 'route' => array('admin.destroy', $userdata->id))) }}	
+									{{Form::button(FA::icon('times') , array(
+           																 'type' => 'submit',
+            															 'class'=> 'btn btn-danger',
+           																 'onclick'=>'return confirm("Are you sure?")'
+    																	));}}
+                       				 {{ Form::close() }}
+                                            </td>
+					</tr>
+					@endforeach
+				
+			  
+			</table>
+		</div><!-- /.box-body -->                                
+	</div>			
+</section>
+<script language="JavaScript">
+	var myHeading = document.querySelector('h1');
+	myHeading.innerHTML = 'Hello world!';
+</script>

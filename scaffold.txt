@@ -1,0 +1,7 @@
+/creates all neccesary details for CRUD of important contact
+php artisan generate:scaffold contact --fields="id:increments,contact_person_name:string,phone:string,mobile:string,is_active:integer,person_description:string" 
+
+//creates CRUD for post
+php artisan generate:scaffold post_staff --fields = "id:increments,post_name:string,is_active:integer"
+//creates all necessart CRUD for staff
+php artisan generate:scaffold staff --fields="id:increments,staff_name:string,address:string,phone:string,mobile:string,post:integer,contact:image,is_active:integer"

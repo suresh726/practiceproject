@@ -16,4 +16,11 @@
 {
 	return View::make('hello');
 });
-Route::resource('users', 'UsersController');
+Route::resource('admin', 'AdminController');
+Route::any('users/login','UserController@login');
+Route::any('users/new','UserController@registerNewUser');
+Route::any('users/logout','UserController@logOutUser');
+Route::resource('newuser', 'MultiUseController');
+Route::resource('contacts', 'ContactsController');
+Route::resource('post_staffs', 'PostStaffsController');
+Route::controller('password', 'RemindersController');

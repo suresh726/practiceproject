@@ -33,26 +33,14 @@ App::after(function($request, $response)
 |
 */
 
-Route::filter('auth', function()
+Route::filter('auth.user', function()
 {
-	if (Auth::guest())
+	if (!(Auth::check()))
 	{
-		if (Request::ajax())
-		{
-			return Response::make('Unauthorized', 401);
-		}
-		else
-		{
-			return Redirect::guest('login');
-		}
+		return Redirect::to('users/login');
 	}
 });
 
-
-Route::filter('auth.basic', function()
-{
-	return Auth::basic();
-});
 
 /*
 |--------------------------------------------------------------------------
@@ -64,11 +52,6 @@ Route::filter('auth.basic', function()
 | response will be issued if they are, which you may freely change.
 |
 */
-
-Route::filter('guest', function()
-{
-	if (Auth::check()) return Redirect::to('/');
-});
 
 /*
 |--------------------------------------------------------------------------

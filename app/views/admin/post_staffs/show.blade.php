@@ -1,0 +1,1 @@
+C:\xampp\htdocs\laravel\app/views/post_staffs/show.blade.php
